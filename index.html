@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambhog - Sexual Wellness & Intimacy</title>
+    <style>
+        :root {
+            --primary-red: #c93a3a;
+            --primary-gold: #d4a84b;
+            --dark-bg: #121212;
+            --light-text: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+        
+        .logo {
+            max-width: 150px;
+        }
+        
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--primary-gold);
+        }
+        
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-gold);
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-gold);
+        }
+        
+        .feature h3 {
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(201, 58, 58, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(201, 58, 58, 0.5);
+        }
+        
+        .app-preview {
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .app-preview img {
+            max-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .testimonials {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+        }
+        
+        footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--light-text);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .feature {
+                min-width: 100%;
+            }
+            
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav {
+                margin-top: 20px;
+            }
+            
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="sambhog.png" alt="Sambhog Logo" class="logo">
+            <nav>
+                <a href="#" class="active">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <h1>Sambhog</h1>
+            <p class="tagline">Explore the path to deeper intimacy, better relationships, and holistic sexual wellness through expert-curated bite-sized knowledge</p>
+        </section>
+        
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">🧠</div>
+                <h3>Expert Knowledge</h3>
+                <p>Access bite-sized, scientifically-backed information curated by leading experts in sexual health, relationships, and intimacy</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">💖</div>
+                <h3>Relationship Growth</h3>
+                <p>Discover tools and insights to nurture deeper connections, better communication, and more fulfilling relationships</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h3>Personal Wellness</h3>
+                <p>Explore content on self-awareness, body positivity, and holistic approaches to sexual health and wellbeing</p>
+            </div>
+        </section>
+        
+       
+        
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"Sambhog has transformed how I approach intimacy in my relationship. The expert advice is practical, respectful, and incredibly helpful."</p>
+                <div class="testimonial-author">- Priya, 29</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"The bite-sized format makes it easy to learn something new every day. I appreciate how the app normalizes conversations around sexual wellness."</p>
+                <div class="testimonial-author">- Rahul, 34</div>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <h2>Start Your Journey Today</h2>
+            <p>Download the Sambhog app for free and unlock a world of expert knowledge on sexual wellness, intimacy, and relationships</p>
+            <br>
+            <a href="#" class="download-btn">Coming soon on Google Play</a>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 Sambhog. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | Terms of Service</p>
+        </footer>
+    </div>
+</body>
+</html>

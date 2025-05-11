@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambhog - Pricing Information</title>
+    <style>
+        :root {
+            --primary-red: #c93a3a;
+            --primary-gold: #d4a84b;
+            --dark-bg: #121212;
+            --light-text: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            max-width: 120px;
+        }
+        
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--primary-gold);
+        }
+        
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-gold);
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        h3 {
+            color: var(--primary-gold);
+            margin: 20px 0 10px;
+            font-size: 1.3rem;
+        }
+        
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+        
+        .download-section {
+            background: linear-gradient(135deg, rgba(201, 58, 58, 0.1), rgba(212, 168, 75, 0.1));
+            border-radius: 15px;
+            padding: 50px 30px;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-illustration {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .phone-mockup {
+            position: relative;
+            width: 280px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .screen-content {
+            height: 100%;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
+            border-radius: 20px;
+        }
+        
+        .screen-text {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .screen-button {
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .pricing-highlight {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .download-cta {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(201, 58, 58, 0.3);
+        }
+        
+        .download-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(201, 58, 58, 0.5);
+        }
+        
+        .features-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 60px 0;
+        }
+        
+        .feature-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-gold);
+        }
+        
+        .payment-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .payment-method {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .payment-icon {
+            font-size: 1.5rem;
+        }
+        
+        .faq-section {
+            margin-top: 60px;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary-gold);
+            position: relative;
+            padding-right: 40px;
+        }
+        
+        .faq-question:after {
+            content: "+";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+        
+        .faq-answer {
+            padding: 0 20px 15px;
+        }
+        
+        .contact-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+            border-radius: 15px;
+        }
+        
+        footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--light-text);
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(201, 58, 58, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(201, 58, 58, 0.5);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav {
+                margin-top: 20px;
+            }
+            
+            nav a {
+                margin: 0 10px;
+            }
+            
+            .feature-item {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="sambhog.png" alt="Sambhog Logo" class="logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#" class="active">Pricing</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cancellation.html">Cancellation</a>
+            </nav>
+        </header>
+        
+        <div class="pricing-header">
+            <h1>Pricing Information</h1>
+            <p class="tagline">Discover affordable access to expert-curated content on sexual wellness, intimacy, and relationships</p>
+        </div>
+        
+        <div class="intro-text">
+            <p>Sambhog offers flexible payment options designed to fit your needs. To view our full pricing details and subscription options, please download our app from the Google Play Store.</p>
+        </div>
+        
+        <div class="download-section">
+            <h2>Download the App to View Pricing</h2>
+            <p>Our detailed pricing plans, payment options, and subscription details are available directly within the Sambhog app.</p>
+            
+            <div class="app-illustration">
+                <div class="phone-mockup">
+                    <div class="screen-content">
+                        <div class="app-logo"></div>
+                        <div class="screen-text">
+                            <h3>Sambhog</h3>
+                            <p>Sexual Wellness & Intimacy</p>
+                        </div>
+                        <p>Discover our flexible pricing options</p>
+                        <div class="screen-button">View Plans</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="download-cta">Coming Soon on Google Play</a>
+        </div>
+        
+        <div class="pricing-highlight">
+            <h2>What to Expect</h2>
+            <p>Sambhog offers both one-time payment options and subscription plans to suit your preferences.</p>
+        </div>
+        
+        <div class="features-section">
+            <div class="feature-item">
+                <div class="feature-icon">🔓</div>
+                <h3>One-Time Payments</h3>
+                <p>Unlock permanent access to specific content modules with a single payment</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🔄</div>
+                <h3>Subscription Options</h3>
+                <p>Access our full library with regular updates through affordable monthly subscriptions</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🎁</div>
+                <h3>Special Offers</h3>
+                <p>Look out for promotional discounts and referral benefits within the app</p>
+            </div>
+        </div>
+        
+        <div class="payment-section">
+            <h2>Secure Payment Methods</h2>
+            <p>Sambhog offers multiple secure payment options processed through Razorpay.</p>
+            
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <span class="payment-icon">💳</span>
+                    <span>Credit/Debit Cards</span>
+                </div>
+                <div class="payment-method">
+                    <span class="payment-icon">🏦</span>
+                    <span>Net Banking</span>
+                </div>
+                <div class="payment-method">
+                    <span class="payment-icon">📱</span>
+                    <span>UPI</span>
+                </div>
+                <div class="payment-method">
+                    <span class="payment-icon">💸</span>
+                    <span>Digital Wallets</span>
+                </div>
+            </div>
+            
+            <p>All transactions are secure and encrypted. We do not store your payment information.</p>
+        </div>
+        
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Why can't I see the exact pricing on the website?</div>
+                <div class="faq-answer">
+                    <p>We offer different pricing tiers and promotional offers that are regularly updated within our app. To ensure you always see the most current pricing and any available special offers, we keep our detailed pricing information within the app.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What payment types do you accept?</div>
+                <div class="faq-answer">
+                    <p>We accept a wide range of payment methods through our secure payment processor, Razorpay, including credit and debit cards, UPI, net banking, and popular digital wallets.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do you offer refunds?</div>
+                <div class="faq-answer">
+                    <p>Yes, we offer a 7-day money-back guarantee if you're not satisfied with the content. To request a refund, contact us at chitramapp@gmail.com with your registered phone number. Note that payments made using referral coupons are not eligible for refunds.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I cancel my subscription?</div>
+                <div class="faq-answer">
+                    <p>You can cancel your subscription directly through your payment platform (Google Play). Navigate to "Payments and Subscriptions" in your account settings to manage your subscription. If you cancel, you'll still have access until the end of your current billing period.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do you offer any discount codes?</div>
+                <div class="faq-answer">
+                    <p>Yes, we occasionally offer promotional discounts and referral codes. These will be visible within the app upon download, so you can take advantage of any current special offers.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h3>Need Help?</h3>
+            <p>Have questions about our pricing or need assistance?</p>
+            <p>📧 <strong>chitramapp@gmail.com</strong></p>
+        </div>
+        
+        <div class="section" style="text-align: center;">
+            <a href="index.html" class="back-to-home">Back to Home</a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Sambhog. All rights reserved.</p>
+            <p>
+                <a href="index.html">Home</a> | 
+                <a href="about.html">About Us</a> | 
+                <a href="#" class="active">Pricing</a> | 
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="terms.html">Terms of Service</a> | 
+                <a href="cancellation.html">Cancellation Policy</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

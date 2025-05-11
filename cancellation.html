@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambhog - Privacy Policy</title>
+    <title>Sambhog - Cancellation Policy</title>
     <style>
         :root {
             --primary-red: #c93a3a;
@@ -49,13 +49,24 @@
             text-decoration: none;
             margin-left: 20px;
             transition: color 0.3s ease;
+            position: relative;
         }
         
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: var(--primary-gold);
         }
         
-        .privacy-header {
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-gold);
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .cancel-header {
             text-align: center;
             margin-bottom: 40px;
         }
@@ -160,6 +171,16 @@
             border-radius: 15px;
         }
         
+        footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--light-text);
+        }
+        
         .back-to-home {
             display: inline-block;
             background: linear-gradient(45deg, var(--primary-red), var(--primary-gold));
@@ -178,6 +199,14 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(201, 58, 58, 0.5);
             color: white;
+        }
+        
+        .note-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--primary-gold);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 25px 0;
         }
         
         @media (max-width: 768px) {
@@ -210,73 +239,70 @@
             <img src="sambhog.png" alt="Sambhog Logo" class="logo">
             <nav>
                 <a href="index.html">Home</a>
-                <a href="privacy.html" class="active">Privacy Policy</a>
+                <a href="about.html">About Us</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="#" class="active">Cancellation</a>
             </nav>
         </header>
         
-        <div class="privacy-header">
-            <h1>Privacy Policy</h1>
+        <div class="cancel-header">
+            <h1>Cancellation Policy</h1>
             <p class="effective-date"><strong>Effective Date:</strong> May 1, 2025</p>
             <p class="contact-email"><strong>Contact Email:</strong> chitramapp@gmail.com</p>
         </div>
         
         <div class="intro">
-            <p>At <strong>Sambhog</strong>, your privacy is our top priority. This Privacy Policy outlines what data we access, how we use it, and your rights as a user of our mobile application.</p>
+            <p>Sambhog app offers both modes of payment: one-time payments and subscriptions. This policy outlines our approach to cancellations, refunds, and subscription management.</p>
         </div>
         
         <div class="section">
-            <h2>1. Information We Collect</h2>
-            <p>We do <strong>not collect personal data</strong> such as your name, phone number, or email. Our app is designed to offer a seamless, login-free experience.</p>
-            <p>However, for functionality and security, we may access limited technical data:</p>
+            <h2>Payment Types</h2>
             
-            <h3>a) Device Information</h3>
-            <p>We use the permission android.permission.READ_PHONE_STATE solely to:</p>
-            <ul>
-                <li>Uniquely identify your device for managing subscription access</li>
-                <li>Tie unlocked video content to your device without requiring sign-up or OTP</li>
-                <li>Prevent abuse and ensure fair access across devices</li>
-            </ul>
-            <p>This information is used locally and is <strong>not stored, shared, or linked to your identity</strong>.</p>
+            <h3>One-Time Payments</h3>
+            <p>Payments once made cannot be canceled on the platform; however, we do provide a <strong>7-day money-back guarantee</strong> in case a customer is not satisfied with the offering.</p>
+            <p>To request a cancellation within 7 days, please contact us at <strong>chitramapp@gmail.com</strong> along with your phone number used for signing up on the platform.</p>
             
-            <h3>b) Payment Information</h3>
-            <p>Payments for unlocking video content are securely processed via <strong>Razorpay</strong>. We do <strong>not collect or store</strong> any credit/debit card, UPI, or bank details. Razorpay's privacy policy is available at: <a href="https://razorpay.com/privacy" target="_blank">https://razorpay.com/privacy</a></p>
+            <h3>Subscriptions</h3>
+            <p>For subscriptions, you can cancel them directly through the platform where the payment was made. Typically, the option to cancel can be found under the "Payments and Subscriptions" tab of the respective payment method.</p>
+            <p>If you cancel your subscription, it will stop for subsequent billing cycles, but the current billing cycle will remain active.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Refund Process</h2>
+            <p>Once you contact our customer care team, they will revert within 7 business days. Our customer care representatives will connect with you to understand the issue and, at their discretion, process a refund.</p>
+            <p>Once approved, the refunded amount will be credited to the respective payment method within 7 business days.</p>
             
-            <h3>c) App Performance & Crash Logs</h3>
-            <p>Anonymous data may be collected (if enabled) to detect bugs or improve performance. This does <strong>not include any personal or device-identifying information</strong>.</p>
-        </div>
-        
-        <div class="section">
-            <h2>2. How We Use This Information</h2>
-            <p>We use device and technical data to:</p>
-            <ul>
-                <li>Manage and verify access to purchased video content</li>
-                <li>Maintain a smooth, login-free experience</li>
-                <li>Improve app performance through technical diagnostics</li>
-            </ul>
-            <p>We do <strong>not sell or trade</strong> your data to any third parties.</p>
-        </div>
-        
-        <div class="section">
-            <h2>3. Children's Privacy</h2>
-            <p>This app is intended for users aged <strong>18 and above</strong>. We do not knowingly collect or store data from children under 18. If you believe a minor has accessed the app inappropriately, please contact us.</p>
-        </div>
-        
-        <div class="section">
-            <h2>4. Your Rights</h2>
-            <p>As we do not collect personal information, there is no personal data stored to modify or delete. For any concerns or clarifications, you may contact us at:</p>
-            <div class="contact-section">
-                <p>📧 <strong>chitramapp@gmail.com</strong></p>
-                <p>📍 <strong>Kanpur, India</strong></p>
+            <div class="note-box">
+                <h3>Important Notes:</h3>
+                <ul>
+                    <li>Payments made using referral coupons are <strong>not eligible for refunds</strong>, irrespective of the time elapsed since the payment.</li>
+                    <li>Refunds may take up to 7 business days to reflect in your account due to processing delays by the bank.</li>
+                    <li>If the refunded amount is not received after 7 days, please contact us at <strong>chitramapp@gmail.com</strong> with your registered phone number.</li>
+                </ul>
             </div>
         </div>
         
         <div class="section">
-            <h2>5. Updates to This Policy</h2>
-            <p>We may occasionally update this Privacy Policy. All changes will be posted on this page with an updated effective date. Continued use of the app implies your acceptance of the latest version.</p>
+            <h2>How to Request a Refund</h2>
+            <p>To request a refund under our 7-day money-back guarantee, please follow these steps:</p>
+            <ol style="padding-left: 30px;">
+                <li>Send an email to <strong>chitramapp@gmail.com</strong></li>
+                <li>Include your registered phone number in the email</li>
+                <li>Briefly explain your reason for requesting a refund</li>
+                <li>Provide any relevant transaction details (date of purchase, amount)</li>
+            </ol>
+            <p>Our team will review your request and respond within 7 business days.</p>
+        </div>
+        
+        <div class="contact-section">
+            <h3>Need Help?</h3>
+            <p>If you have any questions about cancellations or refunds, please contact us at:</p>
+            <p>📧 <strong>chitramapp@gmail.com</strong></p>
         </div>
         
         <div class="section" style="text-align: center;">
-            <p><strong>Thank you for using Sambhog – your trusted app for wellness and intimacy education.</strong></p>
             <a href="index.html" class="back-to-home">Back to Home</a>
         </div>
         
@@ -286,9 +312,9 @@
                 <a href="index.html">Home</a> | 
                 <a href="about.html">About Us</a> | 
                 <a href="pricing.html">Pricing</a> | 
-                <a href="#" class="active">Privacy Policy</a> | 
+                <a href="privacy.html">Privacy Policy</a> | 
                 <a href="terms.html">Terms of Service</a> | 
-                <a href="cancellation.html">Cancellation Policy</a>
+                <a href="#" class="active">Cancellation Policy</a>
             </p>
         </footer>
     </div>
